@@ -1,0 +1,58 @@
+---
+title: ComponentName
+category: optical
+tags: [refraction, spectral, canvas]
+patterns: []
+source: src/components/optical/ComponentName.tsx
+modes: [wooden]
+deps: []
+complexity: moderate
+status: stable
+date: 2026-04-21
+---
+
+# ComponentName
+
+## Идея
+
+_2–5 предложений. Что компонент изображает, какая метафора, что передаёт
+визуально. Без кода. Без скриншотов._
+
+## Механика
+
+_Как реализовано: canvas loop / CSS-only / SVG filter / WebGL шейдер.
+Какие React-хуки, есть ли state, какие внешние либы. Короткий ключевой
+сниппет допустим._
+
+## Зависимости для переноса
+
+- _`LanguageContext` — используется / не используется_
+- _Tailwind классы — список кастомных, если есть_
+- _Шрифт `font-tech` / `font-display` / etc._
+- _Внешние библиотеки: framer-motion, lucide-react, три.js, …_
+- _Canvas / WebGL поддержка_
+- _ENV-переменные, если нужны_
+
+## Что адаптировать при lift'е
+
+_Честно: что сломается при переносе в другой стек. Например:_
+- _Этот компонент читает translations напрямую — в целевом проекте надо
+  пробросить заглушку или замапить на `next-intl`._
+- _Анимация трясёт layout — нужен `will-change: transform` в целевом CSS._
+- _Работает только в dark mode, light mode требует доработки._
+
+## Где уже используется
+
+_Ссылки на reuse-entries. При создании — пусто._
+
+- [[60 - Reuse Log/2026-MM-DD ComponentName → project]]
+
+## Связанные паттерны
+
+_Линки в `50 - Patterns & Motifs/`. При создании — возможно пусто._
+
+- [[50 - Patterns & Motifs/Refraction Layer]]
+
+## Скриншоты
+
+_Опционально, из `95 - Attachments/`._

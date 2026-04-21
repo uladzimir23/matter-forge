@@ -1,0 +1,18 @@
+@use '../../styles/tokens' as *;
+
+.root {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #1a1a1a;
+  border-radius: $radius-sm;
+  padding: 0.02em 0.5em;
+  user-select: none;
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+
+  :global(html.dark) & {
+    background: #2a2a2a;
+    color: #2a2a2a;
+  }
+}

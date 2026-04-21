@@ -1,0 +1,70 @@
+@use '../../styles/tokens' as *;
+
+.root {
+  display: flex;
+  gap: $space-3;
+  padding: $space-4 $space-5;
+  margin: 0 0 $space-5;
+  border-radius: $radius-lg;
+  border: 1px solid;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: $space-1;
+}
+
+.content {
+  color: var(--color-text);
+
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.danger {
+  background: var(--color-red-bg);
+  border-color: var(--color-red-border);
+  .icon { color: var(--color-red); }
+}
+
+.warning {
+  background: var(--color-orange-bg);
+  border-color: var(--color-orange-border);
+  .icon { color: var(--color-orange); }
+}
+
+.info {
+  background: var(--color-blue-bg);
+  border-color: var(--color-blue-border);
+  .icon { color: var(--color-blue); }
+}
+
+.success {
+  background: var(--color-green-bg);
+  border-color: var(--color-green-border);
+  .icon { color: var(--color-green); }
+}
+
+.note {
+  background: var(--color-gray-bg);
+  border-color: var(--color-gray-border);
+  .icon { color: var(--color-gray); }
+}

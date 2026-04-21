@@ -1,0 +1,22 @@
+@use '../../styles/tokens' as *;
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15em 0.65em;
+  font-size: 0.82em;
+  font-weight: 600;
+  border-radius: $radius-pill;
+  border: 1px solid;
+  line-height: 1.4;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.red    { color: var(--color-red);    background: var(--color-red-bg);    border-color: var(--color-red-border); }
+.orange { color: var(--color-orange); background: var(--color-orange-bg); border-color: var(--color-orange-border); }
+.yellow { color: var(--color-yellow); background: var(--color-yellow-bg); border-color: var(--color-yellow-border); }
+.green  { color: var(--color-green);  background: var(--color-green-bg);  border-color: var(--color-green-border); }
+.blue   { color: var(--color-blue);   background: var(--color-blue-bg);   border-color: var(--color-blue-border); }
+.purple { color: var(--color-purple); background: var(--color-purple-bg); border-color: var(--color-purple-border); }
+.gray   { color: var(--color-gray);   background: var(--color-gray-bg);   border-color: var(--color-gray-border); }

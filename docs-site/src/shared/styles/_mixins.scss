@@ -1,0 +1,90 @@
+@use 'tokens' as *;
+
+// ============================================================
+// Mixins
+// ============================================================
+
+// --- Responsive breakpoints (mobile-first) -----------------
+
+@mixin sm { @media (min-width: $bp-sm) { @content; } }
+@mixin md { @media (min-width: $bp-md) { @content; } }
+@mixin lg { @media (min-width: $bp-lg) { @content; } }
+@mixin xl { @media (min-width: $bp-xl) { @content; } }
+
+// Max-width versions (для mobile-only стилей)
+@mixin to-sm { @media (max-width: #{$bp-sm - 1px}) { @content; } }
+@mixin to-md { @media (max-width: #{$bp-md - 1px}) { @content; } }
+@mixin to-lg { @media (max-width: #{$bp-lg - 1px}) { @content; } }
+@mixin to-xl { @media (max-width: #{$bp-xl - 1px}) { @content; } }
+
+// --- iOS-style glass effect --------------------------------
+
+@mixin glass($blur: 20px) {
+  background: var(--bg-glass);
+  backdrop-filter: blur($blur) saturate(180%);
+  -webkit-backdrop-filter: blur($blur) saturate(180%);
+}
+
+// --- Focus ring --------------------------------------------
+
+@mixin focus-ring {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: $radius-sm;
+}
+
+// --- Safe area (iPhone notch / bottom home indicator) -----
+
+@mixin safe-bottom {
+  padding-bottom: calc(#{$space-3} + env(safe-area-inset-bottom));
+}
+
+@mixin safe-top {
+  padding-top: calc(#{$space-3} + env(safe-area-inset-top));
+}
+
+// --- Truncate ----------------------------------------------
+
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// --- Hide scrollbar ---------------------------------------
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+// --- Reset button ------------------------------------------
+
+@mixin reset-button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+// --- Motion-reduce --------------------------------------------
+
+@mixin motion-safe {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}

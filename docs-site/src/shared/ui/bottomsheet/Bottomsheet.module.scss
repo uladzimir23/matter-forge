@@ -1,0 +1,92 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/mixins' as *;
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  z-index: $z-backdrop;
+  backdrop-filter: blur(4px);
+}
+
+.sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--color-bg);
+  border-top-left-radius: $radius-2xl;
+  border-top-right-radius: $radius-2xl;
+  box-shadow: var(--shadow-xl);
+  z-index: $z-modal;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border);
+
+  @include md {
+    border: 1px solid var(--color-border);
+    border-bottom: 0;
+  }
+}
+
+.handle {
+  display: flex;
+  justify-content: center;
+  padding: $space-3 0 $space-1;
+  cursor: grab;
+  flex-shrink: 0;
+
+  &:active { cursor: grabbing; }
+
+  span {
+    width: 36px;
+    height: 4px;
+    border-radius: $radius-pill;
+    background: var(--color-border);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-2 $space-4;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  @include truncate(1);
+  flex: 1;
+  min-width: 0;
+}
+
+.closeBtn {
+  @include reset-button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-md;
+  color: var(--color-text-muted);
+  transition: all $dur-fast $ease-out;
+
+  &:hover {
+    background: var(--color-bg-elev-1);
+    color: var(--color-text);
+  }
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: $space-4 $space-5 $space-8;
+  padding-bottom: calc(#{$space-8} + env(safe-area-inset-bottom));
+  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,47 @@
+@use '../../shared/styles/tokens' as *;
+@use '../../shared/styles/mixins' as *;
+
+.root {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-1;
+  padding: $space-3 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+
+  @include lg {
+    display: none;
+  }
+
+  a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-text);
+      text-decoration: none;
+    }
+  }
+}
+
+.home {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-dim) !important;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+}
+
+.sep {
+  color: var(--color-text-dim);
+}
+
+.current {
+  color: var(--color-text);
+  font-weight: 500;
+}

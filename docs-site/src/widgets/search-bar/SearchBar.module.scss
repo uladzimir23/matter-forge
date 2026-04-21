@@ -1,0 +1,76 @@
+@use '../../shared/styles/tokens' as *;
+@use '../../shared/styles/mixins' as *;
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  height: 36px;
+  padding: 0 $space-2;
+  border: 1px solid var(--color-border);
+  border-radius: $radius-pill;
+  background: var(--color-bg-elev-1);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    color $dur-fast $ease-out,
+    background $dur-fast $ease-out,
+    border-color $dur-fast $ease-out;
+
+  &:hover {
+    color: var(--color-text);
+    background: var(--color-bg-elev-2);
+    border-color: var(--color-border);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  @include md {
+    width: 220px;
+    padding: 0 $space-3;
+    justify-content: flex-start;
+  }
+
+  @include lg {
+    width: 260px;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.label {
+  display: none;
+  flex: 1;
+  text-align: left;
+
+  @include md {
+    display: inline;
+  }
+}
+
+.kbd {
+  display: none;
+  align-items: center;
+  gap: 2px;
+  height: 22px;
+  padding: 0 6px;
+  border: 1px solid var(--color-border);
+  border-radius: $radius-sm;
+  background: var(--color-bg);
+  color: var(--color-text-dim);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  @include md {
+    display: inline-flex;
+  }
+}

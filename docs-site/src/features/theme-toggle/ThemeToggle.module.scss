@@ -1,0 +1,54 @@
+@use '../../shared/styles/tokens' as *;
+
+.placeholder {
+  display: inline-block;
+  width: 102px;
+  height: 38px;
+}
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 3px;
+  border-radius: $radius-pill;
+  background: var(--color-bg-elev-2);
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: $radius-pill;
+  color: var(--color-text-muted);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    color $dur-fast $ease-out,
+    background $dur-fast $ease-out,
+    box-shadow $dur-fast $ease-out;
+
+  &:hover {
+    color: var(--color-text);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+}
+
+.optionActive {
+  color: var(--color-text);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}

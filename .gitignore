@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# matter-forge specific
+.env.local
+.env
+.vault-private/
+.claude/settings.local.json
+
+# docs-site build artifacts
+docs-site/node_modules
+docs-site/out
+docs-site/.next
+docs-site/tsconfig.tsbuildinfo
+
+# Netlify CLI state
+docs-site/.netlify/

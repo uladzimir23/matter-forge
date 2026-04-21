@@ -1,0 +1,80 @@
+@use '../../shared/styles/tokens' as *;
+@use '../../shared/styles/mixins' as *;
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-3;
+  margin-top: $space-12;
+  padding-top: $space-6;
+  border-top: 1px solid var(--color-border);
+
+  @include md {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  padding: $space-4;
+  border-radius: $radius-lg;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  text-decoration: none;
+  transition: all $dur-fast $ease-out;
+  min-height: 72px;
+  min-width: 0;
+
+  &:hover {
+    border-color: var(--color-brand);
+    background: var(--color-bg-elev-1);
+    text-decoration: none;
+  }
+}
+
+.prev {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.next {
+  justify-content: flex-end;
+  text-align: right;
+
+  .inner { align-items: flex-end; }
+
+  @include md {
+    grid-column: 2;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-dim);
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  color: var(--color-text-dim);
+  flex-shrink: 0;
+}

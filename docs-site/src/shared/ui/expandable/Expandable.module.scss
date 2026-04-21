@@ -1,0 +1,67 @@
+@use '../../styles/tokens' as *;
+
+.root {
+  position: relative;
+  margin: $space-4 0 $space-6;
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
+  background: var(--color-bg-elev-1);
+  overflow: hidden;
+}
+
+.title {
+  padding: $space-3 $space-4 0;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.preview {
+  position: relative;
+  padding: $space-4;
+  overflow: hidden;
+
+  & > :first-child { margin-top: 0; }
+  & > :last-child { margin-bottom: 0; }
+}
+
+.fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-bg-elev-1) 80%
+  );
+}
+
+.expandBtn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  padding: $space-3 $space-4;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-link);
+  cursor: pointer;
+  transition: background-color $dur-fast $ease-out;
+
+  &:hover {
+    background: var(--color-bg-elev-2);
+  }
+}
+
+.fullContent {
+  & > :first-child { margin-top: 0; }
+  & > :last-child { margin-bottom: 0; }
+}

@@ -1,0 +1,201 @@
+// ============================================================
+// Design Tokens — Matter Forge docs-site
+// ============================================================
+//
+// Принципы:
+// - CSS custom properties для того что меняется между темами
+// - SCSS переменные для breakpoints / z-index / sizes
+// - Rainbow semantic tokens (7 цветов) для категоризации
+//
+// Применение в компонентах:
+//   color: var(--color-text);
+//   background: var(--color-bg-elev-1);
+//   border-color: var(--color-border);
+// ============================================================
+
+// --- Light theme (default) ----------------------------------
+
+:root {
+  // Surfaces
+  --color-bg:         #ffffff;
+  --color-bg-elev-1:  #fafafa;   // карточки, секции
+  --color-bg-elev-2:  #f3f4f6;   // code blocks, input
+  --color-bg-overlay: rgba(0, 0, 0, 0.4);
+
+  // Text
+  --color-text:       #0a0a0a;
+  --color-text-muted: #525252;
+  --color-text-dim:   #a3a3a3;
+
+  // Borders
+  --color-border:     #e5e7eb;
+  --color-border-muted: #f0f0f0;
+
+  // Brand (Matter Forge — индиго/фуксия к акценту 3 режимов)
+  --color-brand:      #4f46e5;
+  --color-brand-dim:  #6366f1;
+  --color-brand-bg:   #eef2ff;
+
+  // Interaction
+  --color-link:       #2563eb;
+  --color-link-hover: #1e40af;
+  --color-focus:      #60a5fa;
+
+  // Rainbow semantic tokens
+  --color-red:        #dc2626;
+  --color-red-bg:     #fee2e2;
+  --color-red-border: #fca5a5;
+
+  --color-orange:     #ea580c;
+  --color-orange-bg:  #ffedd5;
+  --color-orange-border: #fdba74;
+
+  --color-yellow:     #ca8a04;
+  --color-yellow-bg:  #fef9c3;
+  --color-yellow-border: #fde047;
+
+  --color-green:      #16a34a;
+  --color-green-bg:   #dcfce7;
+  --color-green-border: #86efac;
+
+  --color-blue:       #2563eb;
+  --color-blue-bg:    #dbeafe;
+  --color-blue-border: #93c5fd;
+
+  --color-purple:     #9333ea;
+  --color-purple-bg:  #f3e8ff;
+  --color-purple-border: #d8b4fe;
+
+  --color-gray:       #6b7280;
+  --color-gray-bg:    #f3f4f6;
+  --color-gray-border: #d1d5db;
+
+  // Shadows
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg:  0 12px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl:  0 24px 64px rgba(0, 0, 0, 0.18);
+
+  // Surfaces with backdrop blur (iOS style)
+  --backdrop-blur: blur(20px) saturate(180%);
+  --bg-glass:      rgba(255, 255, 255, 0.72);
+
+  color-scheme: light;
+}
+
+// --- Dark theme --------------------------------------------
+
+:root[data-theme='dark'],
+:root.dark {
+  --color-bg:         #0d0d0f;
+  --color-bg-elev-1:  #141418;
+  --color-bg-elev-2:  #1c1c22;
+  --color-bg-overlay: rgba(0, 0, 0, 0.6);
+
+  --color-text:       #f0f0f0;
+  --color-text-muted: #a8a8a8;
+  --color-text-dim:   #6b6b6b;
+
+  --color-border:     #2a2a30;
+  --color-border-muted: #1f1f24;
+
+  --color-brand:      #5b8fd4;
+  --color-brand-dim:  #60a5fa;
+  --color-brand-bg:   #1e293b;
+
+  --color-link:       #60a5fa;
+  --color-link-hover: #93c5fd;
+  --color-focus:      #3b82f6;
+
+  --color-red:        #f87171;
+  --color-red-bg:     rgba(248, 113, 113, 0.12);
+  --color-red-border: rgba(248, 113, 113, 0.3);
+
+  --color-orange:     #fb923c;
+  --color-orange-bg:  rgba(251, 146, 60, 0.12);
+  --color-orange-border: rgba(251, 146, 60, 0.3);
+
+  --color-yellow:     #facc15;
+  --color-yellow-bg:  rgba(250, 204, 21, 0.1);
+  --color-yellow-border: rgba(250, 204, 21, 0.3);
+
+  --color-green:      #4ade80;
+  --color-green-bg:   rgba(74, 222, 128, 0.1);
+  --color-green-border: rgba(74, 222, 128, 0.3);
+
+  --color-blue:       #60a5fa;
+  --color-blue-bg:    rgba(96, 165, 250, 0.12);
+  --color-blue-border: rgba(96, 165, 250, 0.3);
+
+  --color-purple:     #c084fc;
+  --color-purple-bg:  rgba(192, 132, 252, 0.12);
+  --color-purple-border: rgba(192, 132, 252, 0.3);
+
+  --color-gray:       #9ca3af;
+  --color-gray-bg:    rgba(156, 163, 175, 0.1);
+  --color-gray-border: rgba(156, 163, 175, 0.25);
+
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg:  0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl:  0 24px 64px rgba(0, 0, 0, 0.6);
+
+  --bg-glass:   rgba(13, 13, 15, 0.72);
+
+  color-scheme: dark;
+}
+
+// --- SCSS tokens (compile-time) ----------------------------
+
+// Breakpoints — mobile-first
+$bp-sm:  480px;   // small mobile → larger mobile
+$bp-md:  768px;   // mobile → tablet
+$bp-lg:  1024px;  // tablet → small desktop
+$bp-xl:  1280px;  // small desktop → desktop (full 3-col layout)
+
+// Content widths
+$content-max-width:   720px;
+$sidebar-width:       260px;
+$toc-width:           220px;
+$topbar-height:       64px;
+$topbar-height-mobile: 52px;
+$bottomnav-height:    64px;
+
+// Spacing (rem based on 16px)
+$space-0:   0;
+$space-1:   0.25rem;   // 4
+$space-2:   0.5rem;    // 8
+$space-3:   0.75rem;   // 12
+$space-4:   1rem;      // 16
+$space-5:   1.25rem;   // 20
+$space-6:   1.5rem;    // 24
+$space-8:   2rem;      // 32
+$space-10:  2.5rem;    // 40
+$space-12:  3rem;      // 48
+$space-16:  4rem;      // 64
+
+// Radii
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-2xl: 24px;
+$radius-pill: 999px;
+
+// Z-index stack
+$z-base:         1;
+$z-sticky:       100;
+$z-sidebar:      200;
+$z-topbar:       300;
+$z-bottomnav:    400;
+$z-backdrop:     900;
+$z-modal:        1000;
+$z-popover:      1100;
+$z-toast:        1200;
+
+// Transitions
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$dur-fast:   150ms;
+$dur-md:     250ms;
+$dur-slow:   400ms;
