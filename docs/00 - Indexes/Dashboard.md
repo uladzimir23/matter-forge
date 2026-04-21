@@ -17,9 +17,9 @@ date: 2026-04-21
 |--------|----|
 | Catalog entries | 0 / 215 |
 | Patterns & Motifs | 0 |
-| ADR | 5 |
+| ADR | 6 |
 | Reuse Log | 0 |
-| Session Logs | 1 |
+| Session Logs | 2 |
 
 Компоненты в `src/components/` физически разложены по 16 папкам, но
 MDX-записи в Catalog пока не написаны — они создаются **по triggering
@@ -64,7 +64,6 @@ _пусто_
 - [x] Vault + skills + agents pipeline
 
 **Дальше:**
-- [ ] Задеплоить docs-site (Netlify — решить после наполнения первыми записями)
 - [ ] Написать первые 5–10 catalog-entries для самых ходовых компонентов
 - [ ] Написать первое pattern-essay (вероятно `Refraction Layer`)
 - [ ] Мигрировать Tailwind с CDN на локальный билд

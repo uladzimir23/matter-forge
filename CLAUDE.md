@@ -65,15 +65,18 @@ topology, state, molecular, system. Каждый компонент — иллю
 | Code-split | `React.lazy` на уровне 3 режимов |
 | Деплой | **GitHub Pages** через Actions (ADR-005) |
 
-### docs-site/ (рендер волта)
+### docs-site/ (локальная тула, не деплоится)
+
+**Не деплоится.** Это локальный браузер по волту. См. [[40 - Architecture/42 - ADR/ADR-006 docs-site is local-only]].
 
 | Слой | Технология |
 | --- | --- |
 | Framework | Next.js 16 (App Router, `output: "export"`) |
 | Контент | MDX из `../docs/` |
 | Стили | SCSS Modules + cascade layers |
-| Поиск | Pagefind |
-| Деплой | TBD — GH Pages или Netlify, см. backlog |
+| Поиск | Pagefind (только после `npm run build`, не в dev) |
+| Запуск | `cd docs-site && npm run dev` — http://localhost:3010 |
+| Статический билд для оффлайна | `npm run build && npx serve out` |
 
 ## Архитектура src/
 

@@ -48,6 +48,7 @@ date: 2026-04-21
 - [[40 - Architecture/42 - ADR/ADR-003 Code-split modes]]
 - [[40 - Architecture/42 - ADR/ADR-004 Tailwind stays on CDN]]
 - [[40 - Architecture/42 - ADR/ADR-005 GH Pages via Actions]]
+- [[40 - Architecture/42 - ADR/ADR-006 docs-site is local-only]]
 
 ## 45 Engineering Workflow
 - [[45 - Engineering Workflow/Branching]]
@@ -61,6 +62,7 @@ _пусто_
 
 ## 70 Session Logs
 - [[70 - Session Logs/2026-04-21 Vault + docs-site pipeline]]
+- [[70 - Session Logs/2026-04-21 docs-site as local tool]]
 
 ## 80 Templates
 - [[80 - Templates/component-entry]]

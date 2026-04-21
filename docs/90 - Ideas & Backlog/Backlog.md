@@ -11,8 +11,6 @@ date: 2026-04-21
 
 - [ ] **Tailwind CDN → локальный билд.** См. [[40 - Architecture/42 - ADR/ADR-004 Tailwind stays on CDN]]. Триггеры миграции описаны там.
 - [ ] **Слить два `LanguageContext`** — сейчас дубль в `src/App.tsx` и `src/main.tsx`. Не критично, работает.
-- [ ] **docs-site деплой.** Netlify (как в comforthotel) — наиболее вероятно.
-  Отдельный site, `comforthotel-docs`-style subdomain: `matter-forge-docs.netlify.app`.
 - [ ] **Pre-commit hook на секреты.** Скрипт `scripts/check-secrets.sh`
   написан, но не привязан к git-hooks. Добавить когда (если) появится Gemini
   API ключ.
