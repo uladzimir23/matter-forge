@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect, createContext, useRef } from 'react';
 import { Sun, Moon, Activity, Zap, Shield, Brain, FlaskConical, Orbit, Cloud, Infinity, ThermometerSnowflake, ShieldAlert, ThermometerSun, Radio, Target, Move, Sliders, RefreshCw, Layers, ZapOff, Wind, Eye, Aperture, Box, Globe, Camera, Monitor, Cpu, Waves, Crosshair, Terminal, Layout, Maximize, BoxSelect, HardDrive, Disc, Hammer, Music, Flame, Share2, Link, Scissors, Magnet, Droplets, Anchor, Atom, Boxes } from 'lucide-react';
-import { InteractiveBackgroundGrid } from './components/InteractiveBackgroundGrid';
-import { NeuralCohesionLattice } from './components/NeuralCohesionLattice';
-import { VolumetricMatterKiln } from './components/VolumetricMatterKiln';
-import { KineticSignalMainframe } from './components/KineticSignalMainframe';
-import { IntegratedControlTerminal } from './components/IntegratedControlTerminal';
-import { MechanicalBladeSwitcher } from './components/MechanicalBladeSwitcher';
-import { PressureVaultModal } from './components/PressureVaultModal';
+import { InteractiveBackgroundGrid } from './components/system/InteractiveBackgroundGrid';
+import { NeuralCohesionLattice } from './components/neural/NeuralCohesionLattice';
+import { VolumetricMatterKiln } from './components/volumetric/VolumetricMatterKiln';
+import { KineticSignalMainframe } from './components/kinetic/KineticSignalMainframe';
+import { IntegratedControlTerminal } from './components/system/IntegratedControlTerminal';
+import { MechanicalBladeSwitcher } from './components/system/MechanicalBladeSwitcher';
+import { PressureVaultModal } from './components/system/PressureVaultModal';
 import { translations } from './translations';
 
 

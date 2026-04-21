@@ -9,15 +9,15 @@ import { LanguageContext } from '../App';
 import { playUISound } from './AudioService';
 import { BlueprintStub } from './SharedStubs';
 
-import { ZStackCompression } from '../../components/ZStackCompression';
-import { DeepZStack } from '../../components/DeepZStack';
-import { MembranePortal } from '../../components/MembranePortal';
-import { PressureVaultModal } from '../../components/PressureVaultModal';
-import { SpectralWarp } from '../../components/SpectralWarp';
-import { VortexFluidTrail } from '../../components/VortexFluidTrail';
-import { ElasticScrollOverdrive } from '../../components/ElasticScrollOverdrive';
-import { ThermalTraceSurface } from '../../components/ThermalTraceSurface';
-import { BifurcationMitosis } from '../../components/BifurcationMitosis';
+import { ZStackCompression } from '../../components/volumetric/ZStackCompression';
+import { DeepZStack } from '../../components/volumetric/DeepZStack';
+import { MembranePortal } from '../../components/bio/MembranePortal';
+import { PressureVaultModal } from '../../components/system/PressureVaultModal';
+import { SpectralWarp } from '../../components/optical/SpectralWarp';
+import { VortexFluidTrail } from '../../components/fluid/VortexFluidTrail';
+import { ElasticScrollOverdrive } from '../../components/kinetic/ElasticScrollOverdrive';
+import { ThermalTraceSurface } from '../../components/thermal/ThermalTraceSurface';
+import { BifurcationMitosis } from '../../components/bio/BifurcationMitosis';
 
 export const ExperimentalLabs: React.FC<{ theme: string }> = ({ theme }) => {
    const { t } = useContext(LanguageContext);
