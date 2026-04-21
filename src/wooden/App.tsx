@@ -7,7 +7,7 @@ import {
    CheckCircle2, Shield, Hammer, ArrowLeft, User, LayoutGrid, Wand2, Compass,
    Activity, X, Menu, Sliders, Type, Beaker, Atom, Component, Sparkle
 } from 'lucide-react';
-import { LanguageContext } from '../index';
+import { LanguageContext } from '../main';
 export { LanguageContext };
 import { WoodLattice } from './components/WoodLattice';
 import { EngineeringReport } from './components/EngineeringReport';

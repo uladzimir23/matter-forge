@@ -11,7 +11,7 @@ import {
    ListChecks, MailQuestion, LayoutTemplate, Sun, Moon
 } from 'lucide-react';
 import { GoogleGenAI, Type } from "@google/genai";
-import { LanguageContext } from '../index';
+import { LanguageContext } from '../main';
 
 const playSound = (type: 'click' | 'success' | 'process' | 'delete') => {
    try {

@@ -9,7 +9,7 @@ import {
   BarChart, Radio, Battery, Wifi, List, MousePointer2,
   Bell, Clock
 } from 'lucide-react';
-import { LanguageContext } from '../index';
+import { LanguageContext } from '../main';
 import { playUISound } from '../wooden/components/AudioService';
 import { GoogleGenAI, Type } from "@google/genai";
 import { 
